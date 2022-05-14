@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n=9,r,sp,ast;
+	cout<<" Enter the size of the star";
+	cin>>n;
+	if(n<=0)
+		cout<<" ";
+	else
+	{
+		for(r=1; r<=n; ++r)
+		{
+			for(sp=1; sp<=2*(n+2); ++sp)
+				cout<< " ";
+			for(sp=n; sp>r ; --sp)
+		 		cout<< " ";
+			for(ast=1; ast<=r; ++ast)
+				cout<<"* ";
+			cout<<"\n";
+		}
+		for(r=1; r<=(n+3)/2; ++r)
+		{
+			for(sp=1; sp<=3*(r-1)+1; ++sp)
+				cout<<" ";
+			for(ast=3*(n+1); ast >= 3*(r-1)+1; --ast)
+				cout<<"*";
+			cout<<"\n";
+		}
+		for(r=1; r<=n/2-1; ++r)
+		{
+			for(sp=3*(n+1)/2; sp>=r; --sp)
+				cout<<" ";
+			for(ast=1; ast<=(3*n+3)/2+r; ++ast)
+				cout<<"*";
+			cout<<"\n";
+		}
+		for(r=1; r<=(n+1)/2; ++r)
+		{
+			for(sp=(2*n+7)/2; sp>=r; --sp )
+				cout<<" ";
+			for(ast=n; ast>2*(r-1); --ast)
+				cou<<"* ";
+		
+			for(int sp=1; sp<=10*(r-1)+2; ++sp)
+				cout<<" ";
+			for(ast =n; ast>2*(r-1); --ast)
+				cout<<"* ";
+			cout<<"\n";
+		}
+	}
+}
